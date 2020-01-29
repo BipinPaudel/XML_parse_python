@@ -25,4 +25,13 @@ def prepare_cycle_data():
 
 
 
+def get_cycle_columns(root):
+    cols=[]
+    for node in root.iter('cycles'):
+        for cycle in node.iter('cycle'):
+            for node in cycle:
+                cols.append(node.tag)
+            return cols
+            break
+
 
